@@ -5,7 +5,7 @@ This is my little side project from tcw (check my repos). Tcw definitely isnt de
 
 This repo has two purposes 
 
-1) To gauge the interest of dota 2 gamers in RPGs. I can blow this out in 1/20th the time than I can tcw.
+1) To gauge the interest of dota 2 gamers in RPGs. I can blow this out in 1/20th the time than I can tcw.   
 2) To get tenkz involved in modding
 
 two birds with one stone.
