@@ -56,5 +56,15 @@
 	    "VisionDaytimeRange"    "1800"                  // Range of vision at night time.
 	    "VisionNighttimeRange"    "1800"                  // Range of vision at night time.
 	  }
-	sadfsf
+	"hero_archer_t1"
+	{
+		"override_hero" "npc_dota_hero_drow_ranger"
+	    "AbilityLayout"     "5"
+	    "SoundSet"          "0" 
+	    "Ability1"        "archer_flurry" 
+	    "Ability2"        "archer_lead_shot" 
+	    "Ability3"        "archer_marksmanship" 
+	    "Ability4"        "archer_poison_arrow"
+	    "Ability5"        "archer_strength_shot" 
+	}
 }

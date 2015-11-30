@@ -7,8 +7,8 @@
 	
 	"BaseClass"						"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	"AbilityTextureName"			"drow_ranger_frost_arrows"
-
+	"AbilityTextureName"			"windrunner_focusfire"
+	"MaxLevel" "5"
 	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
 
 	"AbilityCooldown"				"30 30 30 30 30"
@@ -19,14 +19,22 @@
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"12 24 36 48 60"
-
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName" "modifier_archer_flurry"
+			"Duration" "%AbilityDuration"
+			"Target" "CASTER"
+		}
+	}
 
 	"Modifiers"
 	{
 		"modifier_archer_flurry"
 		{
-			"Passive" "1"
-			"IsHidden" "1"
+			"Passive" "0"
+			"IsHidden" "0"
 			"Properties"
 			{
 				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_increase"

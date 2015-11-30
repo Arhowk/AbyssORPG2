@@ -317,4 +317,352 @@
 	      }
 	    }
 	  }
+	//Increases AS by 40% for 9sec
+	//30 sec cd
+	
+	
+	"archer_flurry"
+	{
+		
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"windrunner_focusfire"
+		"MaxLevel" "5"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+	
+		"AbilityCooldown"				"30 30 30 30 30"
+	
+		"AbilityDuration"				"5 6 7 8 9"
+	
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"12 24 36 48 60"
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName" "modifier_archer_flurry"
+				"Duration" "%AbilityDuration"
+				"Target" "CASTER"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_archer_flurry"
+			{
+				"Passive" "0"
+				"IsHidden" "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_increase"
+				}
+			}
+		}
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"attack_speed_increase" "80 160 240 320 400"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"duration" "5 6 7 8 9"
+			}
+		}
+	}
+	//2sec stun per level
+	//20 sec cd
+	
+	"archer_lead_shot"
+	{
+		
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"sniper_assassinate"
+		"MaxLevel" "5"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 20.0 20.0 20.0 20.0"
+		"AbilityDuration"				"2.0 4.0. 6.0 8.0 10.0"
+	
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0 0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"12 24 36 48 60"
+	
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+			"particle" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"TrackingProjectile"
+			{
+				"Target" "TARGET"
+				"EffectName" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+				"Dodgeable" "1"
+				"ProvidesVision" "1"
+				"MoveSpeed" "800"
+			}
+		}
+	
+		"OnProjectileHitUnit"
+		{
+			"FireEffect"
+			{
+				"EffectName" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+				"Target" "TARGET"
+				"EffectAttachType" "follow_origin"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName" "modifier_stunned"
+				"Target" "TARGET"
+				"Duration" "%AbilityDuration"
+			}
+		}
+	
+	}
+	//20% damage per level
+	
+	"archer_marksmanship"
+	{
+		
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"drow_ranger_marksmanship"
+		"MaxLevel" "5"
+	
+		"Modifiers"
+		{
+			"modifier_archer_marksmanship"
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_increase"
+				}
+			}
+		}
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage_increase" "20 40 60 80 100"
+			}
+		}
+	
+	}
+	//5 dps over 10sec
+	//TODO: poison arrow effect
+	"archer_poison_arrow"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"viper_poison_attack"
+		"MaxLevel" "5"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0 0.0"
+		"AbilityDuration"				"5.0 5.0 5.0 5.0 5.0"
+	
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"12 12 12 12"
+	
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+		}
+	
+		"Modifiers"
+		{
+	
+			"archer_poison_arrow_hidden"
+			{
+				"Passive" "1"
+				"IsHidden" "1"
+	
+				"Orb"
+				{
+					"Priority"					"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"			"particles/units/heroes/hero_venomancer/venomancer_base_attack.vpcf"
+					"CastAttack"				"1"
+				}
+				
+				"OnOrbFire"
+				{
+					"SpendMana"
+					{
+						"Mana"					"%AbilityManaCost"
+					}
+				}
+	
+				"OnOrbImpact"
+				{
+					"ApplyModifier"
+					{
+						"ModifierName" "archer_poison_arrow_hit"
+						"Duration" "%poison_duration"
+						"Target" "TARGET"
+					}
+				}
+			}
+	
+			"archer_poison_arrow_hit"
+			{
+				"Passive" "0"
+				"IsHidden" "0"
+				"ThinkInterval" "1"
+			    "OnIntervalThink"
+			    {
+			    	"Damage"
+			    	{
+			    		"Target" "TARGET"
+			    		"Damage" "%damage_per_second"
+			    		"Type" "DAMAGE_TYPE_MAGICAL"
+			    	}
+			    }
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "%slow_percent"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_slow"
+				}
+			}
+	
+		}
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"slow_percent" "-25"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"attack_speed_slow" "35"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage_per_second" "5 10 15 20 25"
+			}
+			"0"
+			{
+				"var_type" "FIELD_INTEGER"
+				"poison_duration" "10"
+			}
+		}
+	
+	}
+	//100 dmg per level
+	//todo: fix
+	"archer_strength_shot"
+	{
+		
+		
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"windrunner_powershot"
+		"MaxLevel" "5"
+	
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"625"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+	
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 20.0 20.0 20.0 20.0"
+		"AbilityDuration"				"0.0 0.0 0.0 0.0 0.0"
+	
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"12 24 36 48 60"
+	
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+			"particle" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"TrackingProjectile"
+			{
+				"Target" "TARGET"
+				"EffectName" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+				"Dodgeable" "1"
+				"ProvidesVision" "1"
+				"MoveSpeed" "800"
+			}
+		}
+	
+		"OnProjectileHitUnit"
+		{
+			"FireEffect"
+			{
+				"EffectName" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+				"Target" "TARGET"
+				"EffectAttachType" "follow_origin"
+			}
+			"Damage"
+			{
+				"Damage" "%damage"
+				"Target" "TARGET"
+				"Type" "DAMAGE_TYPE_MAGICAL"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage" "100 200 300 400 500"
+			}
+		}
+	
+	}
 }

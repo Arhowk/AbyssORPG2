@@ -7,7 +7,8 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"			"drow_ranger_frost_arrows"
+	"AbilityTextureName"			"viper_poison_attack"
+	"MaxLevel" "5"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -77,6 +78,7 @@
 		    	{
 		    		"Target" "TARGET"
 		    		"Damage" "%damage_per_second"
+		    		"Type" "DAMAGE_TYPE_MAGICAL"
 		    	}
 		    }
 

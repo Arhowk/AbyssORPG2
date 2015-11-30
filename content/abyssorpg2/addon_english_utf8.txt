@@ -35,5 +35,82 @@
     "DOTA_Tooltip_ability_item_example_item_speed"							"PROJECTILE SPEED:"
     "DOTA_Tooltip_ability_item_example_item_distance"							"DISTANCE:"
     "DOTA_Tooltip_ability_item_example_item_damage"							"DAMAGE:"
+    		// DOTA 2 MODKIT GENERATED TOOLTIPS FOR: abyssorpg2
+		// Keys already defined in addon_english.txt are not listed, nor are Modifiers with the property "IsHidden" "1".
+
+		// ******************** HEROES ********************
+		"npc_dota_hero_ancient_apparition"                                                "Npc Dota Hero Ancient Apparition3 Abyssorpg2"
+		"npc_dota_hero_drow_ranger"                                                       "Hero Archer T1"
+
+		// ******************** UNITS ********************
+		"npc_dummy_unit"                                                                  "Dummy Unit"
+		"npc_dota_hero_ancient_apparition3_abyssorpg2"                                    "Dota Hero Ancient Apparition3 Abyssorpg2"
+		"hero_archer_t1"                                                                  "Hero Archer T1"
+
+		// ******************** ABILITY MODIFIERS ********************
+		"DOTA_Tooltip_modifier_channel_start"                                             "Channel Start"
+		"DOTA_Tooltip_modifier_channel_start_Description"                                 ""
+
+		"DOTA_Tooltip_archer_poison_arrow_hit"                                            "Archer Poison Arrow Hit"
+		"DOTA_Tooltip_archer_poison_arrow_hit_Description"                                ""
+
+
+		// ******************** ITEM MODIFIERS ********************
+
+		// ******************** ABILITIES ********************
+		"DOTA_Tooltip_ability_abyssorpg2_empty1"                                          "Abyssorpg2 Empty1"
+		"DOTA_Tooltip_ability_abyssorpg2_empty1_Description"                              ""
+
+		"DOTA_Tooltip_ability_abyssorpg2_empty2"                                          "Abyssorpg2 Empty2"
+		"DOTA_Tooltip_ability_abyssorpg2_empty2_Description"                              ""
+
+		"DOTA_Tooltip_ability_abyssorpg2_empty3"                                          "Abyssorpg2 Empty3"
+		"DOTA_Tooltip_ability_abyssorpg2_empty3_Description"                              ""
+
+		"DOTA_Tooltip_ability_abyssorpg2_empty4"                                          "Abyssorpg2 Empty4"
+		"DOTA_Tooltip_ability_abyssorpg2_empty4_Description"                              ""
+
+		"DOTA_Tooltip_ability_abyssorpg2_empty5"                                          "Abyssorpg2 Empty5"
+		"DOTA_Tooltip_ability_abyssorpg2_empty5_Description"                              ""
+
+		"DOTA_Tooltip_ability_abyssorpg2_empty6"                                          "Abyssorpg2 Empty6"
+		"DOTA_Tooltip_ability_abyssorpg2_empty6_Description"                              ""
+
+		"DOTA_Tooltip_ability_containers_lua_targeting"                                   "Containers Lua Targeting"
+		"DOTA_Tooltip_ability_containers_lua_targeting_Description"                       ""
+
+		"DOTA_Tooltip_ability_containers_lua_targeting_tree"                              "Containers Lua Targeting Tree"
+		"DOTA_Tooltip_ability_containers_lua_targeting_tree_Description"                  ""
+
+		"DOTA_Tooltip_ability_dummy_unit"                                                 "Dummy Unit"
+		"DOTA_Tooltip_ability_dummy_unit_Description"                                     ""
+
+		"DOTA_Tooltip_ability_example_ability_damage"                                     "DAMAGE:"
+
+		"DOTA_Tooltip_ability_archer_flurry"                                              "Archer Flurry"
+		"DOTA_Tooltip_ability_archer_flurry_Description"                                  ""
+		"DOTA_Tooltip_ability_archer_flurry_attack_speed_increase"                        "ATTACK SPEED INCREASE:"
+		"DOTA_Tooltip_ability_archer_flurry_duration"                                     "DURATION:"
+
+		"DOTA_Tooltip_ability_archer_lead_shot"                                           "Archer Lead Shot"
+		"DOTA_Tooltip_ability_archer_lead_shot_Description"                               ""
+
+		"DOTA_Tooltip_ability_archer_marksmanship"                                        "Archer Marksmanship"
+		"DOTA_Tooltip_ability_archer_marksmanship_Description"                            ""
+		"DOTA_Tooltip_ability_archer_marksmanship_damage_increase"                        "DAMAGE INCREASE:"
+
+		"DOTA_Tooltip_ability_archer_poison_arrow"                                        "Archer Poison Arrow"
+		"DOTA_Tooltip_ability_archer_poison_arrow_Description"                            ""
+		"DOTA_Tooltip_ability_archer_poison_arrow_slow_percent"                           "SLOW PERCENT:"
+		"DOTA_Tooltip_ability_archer_poison_arrow_attack_speed_slow"                      "ATTACK SPEED SLOW:"
+		"DOTA_Tooltip_ability_archer_poison_arrow_damage_per_second"                      "DAMAGE PER SECOND:"
+		"DOTA_Tooltip_ability_archer_poison_arrow_poison_duration"                        "POISON DURATION:"
+
+		"DOTA_Tooltip_ability_archer_strength_shot"                                       "Archer Strength Shot"
+		"DOTA_Tooltip_ability_archer_strength_shot_Description"                           ""
+
+
+		// ******************** ITEMS ********************
+
 	}
 }

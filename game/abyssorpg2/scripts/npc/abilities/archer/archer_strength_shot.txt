@@ -1,4 +1,5 @@
 //100 dmg per level
+//todo: fix
 "archer_strength_shot"
 {
 	
@@ -8,7 +9,8 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"			"drow_ranger_frost_arrows"
+	"AbilityTextureName"			"windrunner_powershot"
+	"MaxLevel" "5"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -20,9 +22,6 @@
 	"AbilityCooldown"				"20.0 20.0 20.0 20.0 20.0"
 	"AbilityDuration"				"0.0 0.0 0.0 0.0 0.0"
 
-	// Damage.
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"100 200 300 400 500"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -52,11 +51,21 @@
 		{
 			"EffectName" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
 			"Target" "TARGET"
+			"EffectAttachType" "follow_origin"
 		}
 		"Damage"
 		{
-			"Damage" "%AbilityDamage"
+			"Damage" "%damage"
 			"Target" "TARGET"
+			"Type" "DAMAGE_TYPE_MAGICAL"
+		}
+	}
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage" "100 200 300 400 500"
 		}
 	}
 

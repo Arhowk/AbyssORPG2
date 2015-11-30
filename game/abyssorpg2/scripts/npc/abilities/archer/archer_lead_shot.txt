@@ -9,7 +9,8 @@
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"AbilityTextureName"			"drow_ranger_frost_arrows"
+	"AbilityTextureName"			"sniper_assassinate"
+	"MaxLevel" "5"
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
@@ -53,6 +54,7 @@
 		{
 			"EffectName" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
 			"Target" "TARGET"
+			"EffectAttachType" "follow_origin"
 		}
 		"ApplyModifier"
 		{
