@@ -1,0 +1,32 @@
+//20% damage per level
+
+"archer_marksmanship"
+{
+	
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"drow_ranger_frost_arrows"
+
+	"Modifiers"
+	{
+		"modifier_archer_marksmanship"
+		{
+			"Passive" "1"
+			"IsHidden" "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_increase"
+			}
+		}
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"damage_increase" "20 40 60 80 100"
+		}
+	}
+
+}

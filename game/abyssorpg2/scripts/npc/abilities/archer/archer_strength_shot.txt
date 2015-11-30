@@ -1,0 +1,63 @@
+//100 dmg per level
+"archer_strength_shot"
+{
+	
+	
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+	"AbilityTextureName"			"drow_ranger_frost_arrows"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"625"
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+
+	// Time		
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"20.0 20.0 20.0 20.0 20.0"
+	"AbilityDuration"				"0.0 0.0 0.0 0.0 0.0"
+
+	// Damage.
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityDamage"					"100 200 300 400 500"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"12 24 36 48 60"
+
+	"precache"
+	{
+		"particle" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+		"particle" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+	}
+
+	"OnSpellStart"
+	{
+		"TrackingProjectile"
+		{
+			"Target" "TARGET"
+			"EffectName" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
+			"Dodgeable" "1"
+			"ProvidesVision" "1"
+			"MoveSpeed" "800"
+		}
+	}
+
+	"OnProjectileHitUnit"
+	{
+		"FireEffect"
+		{
+			"EffectName" "particles/units/heroes/hero_gyrocopter/gyro_guided_missile_explosion.vpcf"
+			"Target" "TARGET"
+		}
+		"Damage"
+		{
+			"Damage" "%AbilityDamage"
+			"Target" "TARGET"
+		}
+	}
+
+}

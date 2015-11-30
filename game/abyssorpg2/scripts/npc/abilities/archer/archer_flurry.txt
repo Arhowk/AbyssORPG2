@@ -1,0 +1,50 @@
+//Increases AS by 40% for 9sec
+//30 sec cd
+
+
+"archer_flurry"
+{
+	
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	"AbilityTextureName"			"drow_ranger_frost_arrows"
+
+	"AbilityCastPoint"				"0.0 0.0 0.0 0.0 0.0"
+
+	"AbilityCooldown"				"30 30 30 30 30"
+
+	"AbilityDuration"				"5 6 7 8 9"
+
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"12 24 36 48 60"
+
+
+	"Modifiers"
+	{
+		"modifier_archer_flurry"
+		{
+			"Passive" "1"
+			"IsHidden" "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%attack_speed_increase"
+			}
+		}
+	}
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type" "FIELD_INTEGER"
+			"attack_speed_increase" "80 160 240 320 400"
+		}
+		"02"
+		{
+			"var_type" "FIELD_INTEGER"
+			"duration" "5 6 7 8 9"
+		}
+	}
+}
