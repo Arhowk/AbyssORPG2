@@ -4,6 +4,7 @@ local INITIAL_VELOCITY = 22
 local VELOCITY_TICK = 0.8
 
 function DeleteItem(item)
+	if not item then return end
 	if item:GetContainer() then UTIL_RemoveImmediate(item:GetContainer()) end
 	UTIL_RemoveImmediate(item) 
 end
@@ -27,7 +28,7 @@ function _SwirlDown(item)
     if item.SwirlVelocity > -40 then
 		return 0.01
 	else
-		DeleteItem(item)
+		DeleteItem(ip)
 	end
 end
 
