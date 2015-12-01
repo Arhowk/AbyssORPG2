@@ -594,7 +594,7 @@
 	
 	}
 	//100 dmg per level
-	//todo: fix
+	//todo: change particles to differ from concussive, add charge
 	"archer_strength_shot"
 	{
 		

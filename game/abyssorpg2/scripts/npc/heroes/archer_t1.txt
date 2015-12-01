@@ -1,0 +1,66 @@
+"hero_archer_t1"
+{
+	"override_hero" "npc_dota_hero_drow_ranger"
+	"ModelScale"                           "0.8"
+    "AbilityLayout"     "5"
+    "SoundSet"          "0" 
+    "Ability1"        "archer_flurry" 
+    "Ability2"        "archer_lead_shot" 
+    "Ability3"        "archer_marksmanship" 
+    "Ability4"        "archer_poison_arrow"
+    "Ability5"        "archer_strength_shot" 
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "0"                     // Physical protection.
+	
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"                       "2"            // Damage range min.
+		"AttackDamageMax"                       "6"            // Damage range max.
+		"AttackRate"                            "1.5"           // Speed of attack.
+		"AttackAnimationPoint"          "0.3"           // Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"        "400"           // Range within a target can be acquired.
+		"AttackRange"                           "300"           // Range within a target can be attacked.
+		"ProjectileModel"                       "particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"                       "1500"          // Speed of projectile.              
+	
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"                            "40"
+		"HealthBarOffset"                       "170"
+	
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"          "DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "320"           // Speed.                      
+	
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "100"           // Base health.
+		"StatusHealthRegen"                     "0.25"           // Health regeneration rate.
+		"StatusMana"                            "0"                     // Base mana.
+		"StatusManaRegen"                       "0.0"           // Mana regeneration rate.               
+	   
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"            "400"           // Range of vision during day light.
+		"VisionNighttimeRange"          "400"           // Range of vision at night time.
+	
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"                                      "DOTA_TEAM_NEUTRALS"                                      
+		"CombatClassAttack"                     "DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+		"CombatClassDefend"                     "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"         "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+		//Stats
+		"AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"        "5"            // Base strength
+		"AttributeStrengthGain"        "1.5"            // Strength bonus per level.
+		"AttributeBaseAgility"         "18"            // Base agility
+		"AttributeAgilityGain"         "3.25"            // Agility bonus per level.
+		"AttributeBaseIntelligence"    "7"            // Base intelligence
+		"AttributeIntelligenceGain"    "2"            // Intelligence bonus per level.
+}

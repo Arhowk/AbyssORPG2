@@ -59,6 +59,7 @@
 	"hero_archer_t1"
 	{
 		"override_hero" "npc_dota_hero_drow_ranger"
+		"ModelScale"                           "0.8"
 	    "AbilityLayout"     "5"
 	    "SoundSet"          "0" 
 	    "Ability1"        "archer_flurry" 
