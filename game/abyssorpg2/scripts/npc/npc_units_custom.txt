@@ -253,6 +253,10 @@
 		//AI
 		//--------------------------------------------------------------
 		"vscripts" "ai/creep.lua"	
+		"Loot"
+		{
+			"item_claws_of_gg" "100"
+		}
 		
 	}
 	"creep_forest_bandit_ranged"
@@ -411,7 +415,6 @@
 		//---------------------------------------------------------------
 		"precache"
 		{
-			"model"					"models/heroes/furion/treant.vmdl"
 			"particle" 				"particles/neutral_fx/gnoll_base_attack.vpcf"
 		}
 	

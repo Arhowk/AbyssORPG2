@@ -32,6 +32,27 @@ require('internal/events')
 require('settings')
 -- events.lua is where you can specify the actions to be taken when any event occurs and is one of the core abyssorpg2 files.
 require('events')
+require('abyssutil')
+
+function AbyssOrpg2:OnDeath(unit)
+  PrintTable(unit)
+  print("On Death", unit)
+  local unit = EntIndexToHScript(unit.entindex_killed)
+  if GameRules.UnitKV[unit:GetUnitName()].Loot then
+    print("Has loot")
+    for k,v in pairs(GameRules.UnitKV[unit:GetUnitName()].Loot) do
+      if RandomFloat(1,100) <= v then
+        print("Launch")
+        DropLoot(k, unit:GetAbsOrigin())
+      else
+        print("Failed", v)
+      end
+    end
+  else
+    print("No")
+    PrintTable(GameRules.UnitKV[unit:GetUnitName()])
+  end
+end
 
 --[[
   This function should be used to set up Async precache calls at the beginning of the gameplay.
@@ -48,6 +69,8 @@ require('events')
 
   This function should generally only be used if the Precache() function in addon_game_mode.lua is not working.
 ]]
+
+
 function AbyssOrpg2:PostLoadPrecache()
   DebugPrint("[ABYSSORPG2] Performing Post-Load precache")    
   --PrecacheItemByNameAsync("item_example_item", function(...) end)
@@ -85,6 +108,9 @@ function AbyssOrpg2:OnHeroInGame(hero)
 
   -- This line for example will set the starting gold of every hero to 500 unreliable gold
   hero:SetGold(500, false)
+  --hero:SetLevel(MAX_LEVEL) --[[Returns:void
+ ---- Sets the level of this ability.
+  --]]
 
   -- These lines will create an item and add it to the player, effectively ensuring they start with the item
   local item = CreateItem("item_example_item", hero, hero)
@@ -125,6 +151,8 @@ function AbyssOrpg2:InitAbyssOrpg2()
   -- This also sets up event hooks for all event handlers in events.lua
   -- Check out internals/abyssorpg2 to see/modify the exact code
   AbyssOrpg2:_InitAbyssOrpg2()
+
+  GameRules.UnitKV = LoadKeyValues("scripts/npc/npc_units_custom.txt")
 
   -- Commands can be registered for debugging purposes or as functions that can be called by the custom Scaleform UI
   Convars:RegisterCommand( "command_example", Dynamic_Wrap(AbyssOrpg2, 'ExampleConsoleCommand'), "A console command example", FCVAR_CHEAT )

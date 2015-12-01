@@ -88,6 +88,7 @@ function AbyssOrpg2:_InitAbyssOrpg2()
   ListenToGameEvent("dota_tower_kill", Dynamic_Wrap(AbyssOrpg2, 'OnTowerKill'), self)
   ListenToGameEvent("dota_player_selected_custom_team", Dynamic_Wrap(AbyssOrpg2, 'OnPlayerSelectedCustomTeam'), self)
   ListenToGameEvent("dota_npc_goal_reached", Dynamic_Wrap(AbyssOrpg2, 'OnNPCGoalReached'), self)
+  ListenToGameEvent("entity_killed", Dynamic_Wrap(AbyssOrpg2, 'OnDeath'), self)
 
   ListenToGameEvent("player_chat", Dynamic_Wrap(AbyssOrpg2, 'OnPlayerChat'), self)
   
