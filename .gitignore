@@ -52,3 +52,7 @@ content/abyssorpg2/materials/particle/basic_glow.tga
 content/abyssorpg2/materials/particle/basic_glow.vtex
 game/abyssorpg2/maps/template_map.vpk
 game/abyssorpg2/tools_asset_info.bin
+content/abyssorpg2/materials/overviews/template_map.tga
+game/abyssorpg2/materials/overviews/template_map.vmat_c
+game/abyssorpg2/materials/overviews/template_map_tga_d9088edf.vtex_c
+game/abyssorpg2/tools_asset_info.bin
