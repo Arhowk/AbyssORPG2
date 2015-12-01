@@ -1,4 +1,4 @@
-"assassin_deadly_strike_1.txt"
+"assassin_deadly_strike_1"
 
 {
 	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -13,9 +13,58 @@
 	"MaxLevel" "5"
 	"RequiredLevel" "1"
 	"LevelsBetweenUpgrades" "2"
-	"AbilitySpecial"
-	{
-	"01"
-	}
-	"Random"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"crit_chance" "1 2 3 4 5"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"crit_damage" "3500"
+			}
+		}
+
+		"Modifiers"
+		{
+			"assassinate_crit_invisible"
+			{
+			"Passive" "1"
+			"IsHidden" "1"
+			"OnAttackStart"
+			{
+				"Random"
+				{
+				"Chance" "%crit_chance"
+				"OnSuccess"
+				{
+					"ApplyModifier"
+					{
+					"ModifierName" "assassinate_crit_preattack"
+					"Target" "CASTER"
+					}
+				}
+				}
+			}
+			"OnAttackLanded"
+			{
+				"RemoveModifier"
+				{
+					"ModifierName" "assassinate_crit_preattack"
+					"Target" "CASTER"
+				}
+			}
+		}
+		"assassinate_crit_preattack"
+		{
+		"IsHidden" "1"
+		"Properties"
+		{
+			"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_damage"
+		}
+		}
+		}
+
 }
