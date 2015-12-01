@@ -37,13 +37,14 @@
 			{
 				"Random"
 				{
-				"Chance" "%crit_chance"
-				"OnSuccess"
-				{
-					"ApplyModifier"
+					"Chance" "%crit_chance"
+					"OnSuccess"
 					{
-					"ModifierName" "assassinate_crit_preattack"
-					"Target" "CASTER"
+						"ApplyModifier"
+						{
+						"ModifierName" "assassinate_crit_preattack"
+						"Target" "CASTER"
+						}
 					}
 				}
 			}
