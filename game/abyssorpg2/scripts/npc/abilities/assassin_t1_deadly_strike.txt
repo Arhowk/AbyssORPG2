@@ -46,7 +46,6 @@
 					"Target" "CASTER"
 					}
 				}
-				}
 			}
 			"OnAttackLanded"
 			{
@@ -59,12 +58,12 @@
 		}
 		"assassinate_crit_preattack"
 		{
-		"IsHidden" "1"
-		"Properties"
-		{
-			"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_damage"
+			"IsHidden" "1"
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_damage"
+			}
 		}
-		}
-		}
+	}
 
 }

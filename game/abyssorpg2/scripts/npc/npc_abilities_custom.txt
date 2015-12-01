@@ -60,6 +60,75 @@
 	    "BaseClass"           "ability_datadriven"
 	    "AbilityTextureName"            "rubick_empty1"
 	  }
+	"assassin_deadly_strike_1"
+	
+	{
+		"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "ability_datadriven"
+		"AbilityTextureName" "greevil_blade_fury"
+		"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitDamageType" "DAMAGE_TYPE_PHYSICAL"
+		"Passive" "1"
+	
+		"AbilityType" "DOTA_ABILITY_TYPE_PASSIVE"
+		"MaxLevel" "5"
+		"RequiredLevel" "1"
+		"LevelsBetweenUpgrades" "2"
+			"AbilitySpecial"
+			{
+				"01"
+				{
+					"var_type" "FIELD_INTEGER"
+					"crit_chance" "1 2 3 4 5"
+				}
+				"02"
+				{
+					"var_type" "FIELD_INTEGER"
+					"crit_damage" "3500"
+				}
+			}
+	
+			"Modifiers"
+			{
+				"assassinate_crit_invisible"
+				{
+				"Passive" "1"
+				"IsHidden" "1"
+				"OnAttackStart"
+				{
+					"Random"
+					{
+					"Chance" "%crit_chance"
+					"OnSuccess"
+					{
+						"ApplyModifier"
+						{
+						"ModifierName" "assassinate_crit_preattack"
+						"Target" "CASTER"
+						}
+					}
+				}
+				"OnAttackLanded"
+				{
+					"RemoveModifier"
+					{
+						"ModifierName" "assassinate_crit_preattack"
+						"Target" "CASTER"
+					}
+				}
+			}
+			"assassinate_crit_preattack"
+			{
+				"IsHidden" "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_damage"
+				}
+			}
+		}
+	
+	}
 	"containers_lua_targeting"
 	  {
 	    // General

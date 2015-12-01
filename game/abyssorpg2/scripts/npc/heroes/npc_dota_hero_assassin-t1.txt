@@ -3,7 +3,7 @@
     "AbilityLayout"     "6"
     "override_hero"     "npc_dota_hero_bounty_hunter"
     "SoundSet"          "0" 
-    "Ability1"        "example_ability" 
+    "Ability1"        "assassin_t1_deadly_strike" 
     "Ability2"        "abyssorpg2_empty2" 
     "Ability3"        "abyssorpg2_empty3" 
     "Ability4"        "abyssorpg2_empty4"
