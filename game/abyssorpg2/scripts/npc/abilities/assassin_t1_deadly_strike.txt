@@ -1,0 +1,21 @@
+"assassin_deadly_strike_1.txt"
+
+{
+	"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"BaseClass" "ability_datadriven"
+	"AbilityTextureName" "greevil_blade_fury"
+	"AbilityUnitTargetTeam" "DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType" "DOTA_UNIT_TARGET_ALL"
+	"AbilityUnitDamageType" "DAMAGE_TYPE_PHYSICAL"
+	"Passive" "1"
+
+	"AbilityType" "DOTA_ABILITY_TYPE_PASSIVE"
+	"MaxLevel" "5"
+	"RequiredLevel" "1"
+	"LevelsBetweenUpgrades" "2"
+	"AbilitySpecial"
+	{
+	"01"
+	}
+	"Random"
+}
