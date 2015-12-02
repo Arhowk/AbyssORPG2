@@ -12,18 +12,19 @@ local tick = 0
 function SpawnAIInit()
 	local needsSpawn = false
 	if thisEntity:GetAbsOrigin().x == 0 and thisEntity:GetAbsOrigin().y == 0 and thisEntity:GetAbsOrigin().z == 0 then
-		needsSpawn = true
 		spawnPos = Vector(0,0,0)
 	else
 		spawnPos = thisEntity:GetAbsOrigin()
 	end
 	name = thisEntity:GetUnitName()
-	thisEntity:SetContextThink( "Periodic", Periodic, needsSpawn and 0.03 or math.random())
+	thisEntity:SetContextThink( "Periodic", Periodic, 0.01)
 end
 
 function Periodic()
+	local random = false
 	if spawnPos == Vector(0,0,0) then
 		spawnPos = thisEntity:GetAbsOrigin()
+		random = true
 	end
 	name = thisEntity:GetUnitName()
 	if thisEntity:IsAlive() then
@@ -36,6 +37,9 @@ function Periodic()
 			CreateUnitByName(name, spawnPos, true, nil, nil, DOTA_TEAM_NEUTRALS) 
 			return nil
 		end
+	end
+	if random then
+		return math.random()
 	end
 	return 1
 end
