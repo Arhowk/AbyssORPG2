@@ -39,7 +39,7 @@ function AbyssOrpg2:OnDeath(unit)
   print("On Death", unit)
   local unit = EntIndexToHScript(unit.entindex_killed)
   if not unit then return end
-  if not GameRule.UnitKV[unit:GetUnitName()] then return end
+  if not GameRules.UnitKV[unit:GetUnitName()] then return end
   if GameRules.UnitKV[unit:GetUnitName()].Loot then
     print("Has loot")
     for k,v in pairs(GameRules.UnitKV[unit:GetUnitName()].Loot) do
