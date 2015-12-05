@@ -43,7 +43,6 @@
 			"Target" "TARGET"
 			"EffectName" "particles/units/heroes/hero_tinker/tinker_missile.vpcf"
 			"Dodgeable" "1"
-			"ProvidesVision" "1"
 			"MoveSpeed" "800"
 		}
 	}
