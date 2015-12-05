@@ -22,6 +22,8 @@ require('libraries/notifications')
 require('libraries/animations')
 -- This library can be used for performing "Frankenstein" attachments on units
 require('libraries/attachments')
+--This library configures the custom stats
+require('libraries/attributes')
 
 
 -- These internal libraries set up abyssorpg2's events and processes.  Feel free to inspect them/change them if you need to.
@@ -110,6 +112,7 @@ function AbyssOrpg2:OnHeroInGame(hero)
 
   -- This line for example will set the starting gold of every hero to 500 unreliable gold
   hero:SetGold(500, false)
+  Attributes:ModifyBonuses(hero)
   --hero:SetLevel(MAX_LEVEL) --[[Returns:void
  ---- Sets the level of this ability.
   --]]

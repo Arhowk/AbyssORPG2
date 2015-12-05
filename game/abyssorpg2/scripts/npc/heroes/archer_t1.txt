@@ -56,7 +56,7 @@
 		"UnitRelationshipClass"         "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 	
 		//Stats
-		"AttributePrimary"             "DOTA_ATTRIBUTE_STRENGTH"
+		"AttributePrimary"             "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"        "5"            // Base strength
 		"AttributeStrengthGain"        "1.5"            // Strength bonus per level.
 		"AttributeBaseAgility"         "18"            // Base agility

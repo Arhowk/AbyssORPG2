@@ -1,9 +1,9 @@
-"creep_default"
+"creep_will_o_the_wisp"
 {
 	
 	// General
 	//----------------------------------------------------------------
-	"Model"                                "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"   // Model.
+	"Model"                                "models/items/courier/echo_wisp/echo_wisp_flying.vmdl"   // Model.
 	"BaseClass"                            "npc_dota_creature"
 	"SoundSet"                             "n_creep_Melee"
 	"GameSoundsFile"                       "soundevents/game_sounds_creeps.vsndevts"

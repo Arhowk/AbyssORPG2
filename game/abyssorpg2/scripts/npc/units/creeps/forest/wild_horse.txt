@@ -1,13 +1,13 @@
-"creep_default"
+"creep_wild_horse"
 {
 	
 	// General
 	//----------------------------------------------------------------
-	"Model"                                "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"   // Model.
+	"Model"                                "models/items/courier/vigilante_fox_red/vigilante_fox_red.vmdl"   // Model.
 	"BaseClass"                            "npc_dota_creature"
 	"SoundSet"                             "n_creep_Melee"
 	"GameSoundsFile"                       "soundevents/game_sounds_creeps.vsndevts"
-	"Level"                                "1"
+	"Level"                                "3"
 	"ModelScale"                           "0.8"
 
 	// Abilities
@@ -23,10 +23,10 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"            "DOTA_UNIT_CAP_RANGED_ATTACK"
-	"AttackDamageMin"                       "7"            // Damage range min.
-	"AttackDamageMax"                       "9"            // Damage range max.
-	"AttackRate"                            "0.8"           // Speed of attack.
+	"AttackCapabilities"            "DOTA_UNIT_CAP_MELEE_RANGED_ATTACK"
+	"AttackDamageMin"                       "11"            // Damage range min.
+	"AttackDamageMax"                       "14"            // Damage range max.
+	"AttackRate"                            "1.4"           // Speed of attack.
 	"AttackAnimationPoint"          "0.3"           // Normalized time in animation cycle to attack.
 	"AttackAcquisitionRange"        "400"           // Range within a target can be acquired.
 	"AttackRange"                           "300"           // Range within a target can be attacked.
@@ -40,7 +40,7 @@
 
 	// Bounty
 	//----------------------------------------------------------------
-	"BountyXP"                              "18"            // Experience earn.
+	"BountyXP"                              "48"            // Experience earn.
 	"BountyGoldMin"                         "8"            // Gold earned min.
 	"BountyGoldMax"                         "10"            // Gold earned max.
 
@@ -51,7 +51,7 @@
 
 	// Status
 	//----------------------------------------------------------------
-	"StatusHealth"                          "100"           // Base health.
+	"StatusHealth"                          "200"           // Base health.
 	"StatusHealthRegen"                     "0.5"           // Health regeneration rate.
 	"StatusMana"                            "0"                     // Base mana.
 	"StatusManaRegen"                       "0.0"           // Mana regeneration rate.               

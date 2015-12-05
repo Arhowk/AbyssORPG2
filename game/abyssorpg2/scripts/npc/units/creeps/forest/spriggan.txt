@@ -1,14 +1,14 @@
-"creep_default"
+"creep_spriggan"
 {
 	
 	// General
 	//----------------------------------------------------------------
-	"Model"                                "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"   // Model.
+	"Model"                                "models/heroes/enchantress/enchantress.vmdl"   // Model.
 	"BaseClass"                            "npc_dota_creature"
 	"SoundSet"                             "n_creep_Melee"
 	"GameSoundsFile"                       "soundevents/game_sounds_creeps.vsndevts"
 	"Level"                                "1"
-	"ModelScale"                           "0.8"
+	"ModelScale"                           "0.55"
 
 	// Abilities
 	//----------------------------------------------------------------

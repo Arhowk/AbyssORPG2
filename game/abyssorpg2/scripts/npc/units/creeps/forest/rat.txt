@@ -1,9 +1,9 @@
-"creep_default"
+"creep_rat"
 {
 	
 	// General
 	//----------------------------------------------------------------
-	"Model"                                "models/creeps/neutral_creeps/n_creep_gnoll/n_creep_gnoll.vmdl"   // Model.
+	"Model"                                "models/creeps/neutral_creeps/n_creep_troll_dark_b/n_creep_troll_dark_b.vmdl"   // Model.
 	"BaseClass"                            "npc_dota_creature"
 	"SoundSet"                             "n_creep_Melee"
 	"GameSoundsFile"                       "soundevents/game_sounds_creeps.vsndevts"
@@ -23,13 +23,13 @@
 
 	// Attack
 	//----------------------------------------------------------------
-	"AttackCapabilities"            "DOTA_UNIT_CAP_RANGED_ATTACK"
+	"AttackCapabilities"            "DOTA_UNIT_CAP_MELEE_ATTACK"
 	"AttackDamageMin"                       "7"            // Damage range min.
 	"AttackDamageMax"                       "9"            // Damage range max.
-	"AttackRate"                            "0.8"           // Speed of attack.
+	"AttackRate"                            "1.35"           // Speed of attack.
 	"AttackAnimationPoint"          "0.3"           // Normalized time in animation cycle to attack.
 	"AttackAcquisitionRange"        "400"           // Range within a target can be acquired.
-	"AttackRange"                           "300"           // Range within a target can be attacked.
+	"AttackRange"                           "125"           // Range within a target can be attacked.
 	"ProjectileModel"                       "particles/neutral_fx/gnoll_base_attack.vpcf" // Particle system model for projectile.
 	"ProjectileSpeed"                       "1500"          // Speed of projectile.              
 
